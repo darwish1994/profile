@@ -6,8 +6,8 @@ fetch("data/data.json")
     let c =
       ' <div class="col-6">' +
       ' <div class="row">' +
-      ' <img src="' +data["logo"] +'" alt="app logo" class="col-2"  />' +
-      ' <h2> <a href="' + data["app_link"] +'">' +  data["title"] +"</a></h3>"+" </div>" + "<p>" + data["details"] + " </p>" + "</div>";
+      ' <img src="' +data.logo +'" alt="app logo" class="col-2"  />' +
+      ' <h2> <a href="' + data.app_link +'">' +  data.title +"</a></h3>"+" </div>" + "<p>" + data.details + " </p>" + "</div>";
 
     $("#project_list").append(c);
  

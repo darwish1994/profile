@@ -1,4 +1,5 @@
-$("#project_list").append( "jkdfhgjfdhjgkhdfkjk"):
+$("#project_list").append( "jkdfhgjfdhjgkhdfkjk");
+console.log("sdafsdfsdfdsa");
 fetch("data/data.json")
   .then((response) => response.json())
   .then((data) => {

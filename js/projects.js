@@ -1,5 +1,3 @@
-$("#project_list").append("jkdfhgjfdhjgkhdfkjk");
-console.log("sdafsdfsdfdsa");
 fetch("data/data.json")
   .then((response) => response.json())
   .then((data) => {
@@ -16,7 +14,6 @@ fetch("data/data.json")
         `;
         $("#project_list").append(c);
       }
-    console.log(data);
   })
   .catch((error) => {
     console.error("Error fetching JSON data:", error);

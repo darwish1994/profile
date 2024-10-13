@@ -9,7 +9,7 @@ fetch("data/data.json")
               <img src="${app.logo}" alt="app logo" class="col-2" />
               <h2><a href="${app.app_link}">${app.title}</a></h2>
             </div>
-            <h5>${app.skils}</h5>
+            <h8>${app.skils}</h8>
             <p>${app.details}</p>
           </div>
         `;

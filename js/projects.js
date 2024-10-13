@@ -4,12 +4,13 @@ fetch("data/data.json")
     for (const element of data) {
         const app = element;
         let c = `
-          <div class="col-6">
+          <div class="col-12">
             <div class="row">
-              <img src="${app.logo}" alt="app logo" class="col-2" />
+              <img src="${app.logo}" alt="app logo" class="col-3" />
               <h2><a href="${app.app_link}">${app.title}</a></h2>
             </div>
-            <h8 class="red">(${app.skils})</h8>
+            <h8
+             class="red">(${app.skils})</h8>
             <p>${app.details}</p>
           </div>
         `;

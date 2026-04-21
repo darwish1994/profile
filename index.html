@@ -3,31 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Redirect</title>
+    <title>Privacy Policy – Home Pharmacy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2 { color: #0b5e7e; }
+        h1 { border-bottom: 2px solid #0b5e7e; padding-bottom: 10px; }
+        .last-updated { color: #666; font-size: 0.9em; margin-bottom: 30px; }
+        footer { margin-top: 40px; font-size: 0.8em; border-top: 1px solid #ccc; padding-top: 20px; }
+    </style>
 </head>
 <body>
-    <div id="content"></div>
+    <h1>Privacy Policy for Home Pharmacy</h1>
+    <div class="last-updated">Last updated: April 21, 2026</div>
 
-    <script>
-        function getPhoneFromURL() {
-            const params = new URLSearchParams(window.location.search);
-            return params.get('phone');
-        }
+    <p>Welcome to Home Pharmacy. Your privacy is critically important to us. This Privacy Policy explains what information we collect, how we use it, and your rights regarding that information.</p>
 
-        function formatPhone(phone) {
-            return phone.replace(/[^\d+]/g, '').replace(/\+(.+)/, '+$1');
-        }
+    <h2>1. Information We Do NOT Collect</h2>
+    <p>Home Pharmacy is designed to work <strong>completely offline</strong>. We do not collect, store, or transmit any personal data, medication lists, prescription images, or device information to any server. All data (medicines, expiry dates, storage conditions) remains <strong>only on your device</strong> in a local SQLite database.</p>
 
-        const phone = getPhoneFromURL();
+    <h2>2. Camera and Storage Permissions</h2>
+    <p>The app requests access to your camera and photo gallery <strong>only for the purpose of scanning prescription images</strong>. These images are processed locally on your device using on‑device OCR (text recognition). They are never uploaded, saved to the cloud, or shared with third parties. After processing, the image is discarded unless you explicitly save it (you are never prompted to save).</p>
 
-        if (phone) {
-            const cleanPhone = formatPhone(phone);
-            // Immediate automatic redirect
-            window.location.href = `tel:${cleanPhone}`;
-        } else {
-            document.getElementById('content').innerHTML = 
-                '<p>Error: No phone number provided. Use ?phone=YOUR_NUMBER</p>';
-        }
-    </script>
+    <h2>3. No Internet Access</h2>
+    <p>Home Pharmacy does not require an internet connection and does not send any data over the network. Therefore, we cannot collect or leak your information remotely.</p>
+
+    <h2>4. Third-Party Services</h2>
+    <p>The app uses no third-party analytics, crash reporting, advertising, or social media SDKs. The only external components are open-source libraries (Kotlin, Compose, SQLDelight, etc.) that operate locally.</p>
+
+    <h2>5. Children’s Privacy</h2>
+    <p>Home Pharmacy is not directed to children under 13, but it does not collect any personal information from anyone, regardless of age.</p>
+
+    <h2>6. Changes to This Privacy Policy</h2>
+    <p>We may update this policy from time to time. Any changes will be posted on this page with an updated “Last updated” date. Continued use of the app after changes constitutes acceptance.</p>
+
+    <h2>7. Contact Us</h2>
+    <p>If you have questions about this Privacy Policy, please contact:<br>
+    <strong>Email:</strong> privacy@homepharmacy.example.com<br>
+    <strong>Address:</strong> [Your Company Address, if any]</p>
+
+    <footer>
+        <p>© 2026 Home Pharmacy. All rights reserved.</p>
+    </footer>
 </body>
 </html>
